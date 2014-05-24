@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "EVE Old Forum Linker",
+  "version": "0.1",
+  "description": "Fix external links in the old EVE Online forums",
+  "homepage_url": "https://github.com/Graham42/eve-old-forum-linker",
+  "content_scripts": [
+    {
+      "matches": [
+      "http://oldforums.eveonline.com/*",
+      "https://oldforums.eveonline.com/*"
+      ],
+      "js": [
+        "jquery-2.1.1.js",
+        "link_fixer.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "http://oldforums.eveonline.com/*",
+    "https://oldforums.eveonline.com/*"
+  ]
+}
