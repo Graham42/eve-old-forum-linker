@@ -1,5 +1,12 @@
+(function(){
+  'use strict';
 
-$('a[href*=externalLink]').each( function(){
-  this.href = this.href.replace(/.*externalLink\.aspx\?l=/,"");
-  $(this).attr('href', decodeURIComponent($(this).attr('href')));
-})
+  [].forEach.call(
+    document.querySelectorAll('a[href*=externalLink]'),
+    function (elem) {
+      var newLink = elem.href.replace(/.*externalLink\.aspx\?l=/,"");
+      elem.href = decodeURIComponent(newLink);
+    }
+  );
+
+})();

@@ -12,11 +12,10 @@
   "content_scripts": [
     {
       "matches": [
-      "http://oldforums.eveonline.com/*",
-      "https://oldforums.eveonline.com/*"
+        "http://oldforums.eveonline.com/*",
+        "https://oldforums.eveonline.com/*"
       ],
       "js": [
-        "jquery-2.1.1.js",
         "link_fixer.js"
       ],
       "run_at": "document_end"
